@@ -1,0 +1,150 @@
+{% extends 'common_codes/base.html' %}
+{% load static %}
+{% block title %}Give Your Data{% endblock %}
+{% block main %}
+<div class="container mb-5">
+    <h1 class="text-center mb-4">Heart Disease Prediction</h1>
+    <form method="POST" action="{% url 'predict' %}" class="border p-4 rounded bg-light shadow" id="predictionForm">
+        {% csrf_token %}
+        <div class="row">
+            
+            <div class="col-md-6 mb-3">
+                <label for="height" class="form-label">Height:</label>
+                <input type="number" step="0.1" name="height" id="height" class="form-control" required placeholder="Height in feet (e.g., 5.4)">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="weight" class="form-label">Weight:</label>
+                <div class="row">
+                    <div class="col-8">
+                        <input type="number" step="0.1" name="weight" id="weight" class="form-control" required placeholder="Weight (e.g., 70)">
+                    </div>
+                    <div class="col-4">
+                        <select name="weight_unit" id="weight_unit" class="form-select" required>
+                            <option value="kg" selected>kg</option>
+                            <option value="pounds">pounds</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Smoking -->
+                <div class="col-md-6 mb-3">
+                    <label for="smoking" class="form-label">Smoking:</label>
+                    <select name="smoking" id="smoking" class="form-select" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="alcohol" class="form-label">Alcohol Drinking:</label>
+                    <select name="alcohol" id="alcohol" class="form-select" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="stroke" class="form-label">Stroke:</label>
+                    <select name="stroke" id="stroke" class="form-select" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="physical_health" class="form-label">Physical Health (days):</label>
+                    <input type="number" step="1" name="physical_health" id="physical_health" class="form-control" required placeholder="Days with poor physical health (0-30)">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="mental_health" class="form-label">Mental Health (days):</label>
+                    <input type="number" step="1" name="mental_health" id="mental_health" class="form-control" required placeholder="Days with poor mental health (0-30)">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="diff_walking" class="form-label">Difficulty Walking:</label>
+                    <select name="diff_walking" id="diff_walking" class="form-select" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="sex" class="form-label">Sex:</label>
+                    <select name="sex" id="sex" class="form-select" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">Male</option>
+                        <option value="0">Female</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="age_category" class="form-label">Age Category:</label>
+                    <select name="age_category" id="age_category" class="form-select" required>
+                        <option value="" disabled selected>Select your age range</option>
+                        <option value="0">18-24</option>
+                        <option value="1">25-29</option>
+                        <option value="2">30-34</option>
+                        <option value="3">35-39</option>
+                        <option value="4">40-44</option>
+                        <option value="5">45-49</option>
+                        <option value="6">50-54</option>
+                        <option value="7">55-59</option>
+                        <option value="8">60-64</option>
+                        <option value="9">65-69</option>
+                        <option value="10">70-74</option>
+                        <option value="11">75-79</option>
+                        <option value="12">80 or older</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="diabetic" class="form-label">Diabetic:</label>
+                    <select name="diabetic" id="diabetic" class="form-select" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="0">No</option>
+                        <option value="1">No, borderline diabetes</option>
+                        <option value="2">Yes</option>
+                        <option value="3">Yes (during pregnancy)</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="physical_activity" class="form-label">Physical Activity:</label>
+                    <select name="physical_activity" id="physical_activity" class="form-select" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="gen_health" class="form-label">General Health:</label>
+                    <select name="gen_health" id="gen_health" class="form-select" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="0">Poor</option>
+                        <option value="1">Fair</option>
+                        <option value="2">Good</option>
+                        <option value="3">Very Good</option>
+                        <option value="4">Excellent</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="sleep_time" class="form-label">Sleep Time (hours):</label>
+                    <input type="number" step="0.1" name="sleep_time" id="sleep_time" class="form-control" required placeholder="Average hours of sleep (e.g., 7.5)">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="kidney_disease" class="form-label">Kidney Disease:</label>
+                    <select name="kidney_disease" id="kidney_disease" class="form-select" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <p class="text-danger fs-5"> N.B : This is a research based approach for measuring risk of heart disease.</p>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Predict</button>
+            </div>
+        </form>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    {% endblock main %}

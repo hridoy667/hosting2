@@ -1,0 +1,88 @@
+{% extends 'common_codes/interface.html' %}
+{% block title %}Healthcare Suggestions{% endblock %}
+
+{% block main %}
+    <style>
+        .acrd {
+            padding: 10px 20px; 
+        }
+        .accordion-button {
+            text-align: center; 
+        }
+    </style> 
+    <div class="container my-5 fs-5 ">
+        <h2 class="text-center text-primary mb-4">Healthcare Suggestions</h2>
+        
+        {% if error %}
+            <div class="alert alert-danger text-center">
+                {{ error }}
+            </div>
+        {% else %}
+            <!-- Display BMI Information -->
+            {% if bmi_category %}
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body ">
+                        <p><strong>Diet:</strong> </br> {{ bmi_category.diet_suggestion|safe }}</p>
+                        <p><strong>Exercise:</strong></br> {{ bmi_category.exercise_suggestion|safe }}</p>
+                        <p><strong>Water Intake Suggestion:</strong></br> {{ bmi_category.water_intake_suggestion|safe }}</p>
+                        <p><strong>Sleep Suggestion:</strong></br> {{ bmi_category.sleep_suggestion|safe }}</p>
+                    </div>
+                </div>
+            {% endif %}
+
+            <!-- Disease-Specific Section -->
+            {% if disease_category and disease_category.name != "General" %}
+            <h4><u>Learn About Your Prehistoric disease :</u> </h4>
+
+            <div class="accordion accordion-flush " id="singleAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed justify-content-center text-center bg-warning fs-5 " type="button" data-bs-toggle="collapse" data-bs-target="#collapseSingle" aria-expanded="false" aria-controls="collapseSingle">
+                        <strong class="fs-5">{{ disease_category.name }}</strong>
+                    </button>
+                  </h2>
+                  <div id="collapseSingle" class="accordion-collapse collapse acrd" data-bs-parent="#singleAccordion">
+                    <div class="accordion-body">
+                        {% if disease_category %}
+                        <div class="card shadow-sm mb-4 acrd bg-secondary text-white">
+    
+                                <h5 class="card-title text-center text-white"><strong>{{ disease_category.name }}</strong></h5>
+                                <p class="card-text text-muted text-center">{{ disease_category.description|safe }}</p>
+                            
+                        </div>
+                    {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            
+
+            <!-- Healthcare Suggestions -->
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    
+                    {% if healthcare_suggestions %}
+                    <h4 class="card-title text-center text-info">Suggestions for You</h4>
+                        <ul class="list-group list-group-flush mt-3">
+                            {% for suggestion in healthcare_suggestions %}
+                                <li class="list-group-item">
+                                    <h6 class="fw-bold">{{ suggestion.disease_category.name }}</h6>
+                                    <p>{{ suggestion.suggestion|safe }}</p>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <div class="alert alert-info mt-3 text-center">
+                            No specific healthcare suggestions are available for {{ disease_history }}.
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endif %}
+        {% endif %}
+    </div>
+
+
+
+{% endblock %}

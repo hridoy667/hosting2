@@ -1,0 +1,271 @@
+{% extends 'common_codes/interface.html' %}
+{% block title %}Mindfulness and Mental Well-Being{% endblock %}
+{% block main %}
+<style>
+    iframe {
+        border-radius: 10px;
+        border: 2px solid #007bff;
+    }
+    .card {
+        border-radius: 15px;
+    }
+    h4.card-title {
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 8px;
+    }
+
+    .line-container {
+        width: 100%;
+        max-width: 600px;
+        height: 10px;
+        background-color: #ddd;
+        position: relative;
+        margin: 30px auto;
+        border-radius: 5px;
+    }
+
+    .circle {
+        width: 20px;
+        height: 20px;
+        background-color: #007bff;
+        border-radius: 50%;
+        position: absolute;
+        top: -5px;
+        left: 0;
+    }
+
+    .instructions {
+        width:30px
+        font-size: 1.5rem;
+        margin: 20px 0;
+        text-align: center;
+        color: #555;
+        
+    }
+
+    .btn-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>
+
+<div class="container my-5 fs-5">
+    <h1 class="text-center text-primary mb-4">Mindfulness and Mental Well-Being</h1>
+
+    <!-- Introduction Section -->
+    <div class="card shadow-lg mb-4 bg-light border-0">
+        <div class="card-body text-center">
+            <h3 class="text-primary">Nurture Your Mind and Soul</h3>
+            <p class="lead">Explore proven techniques, resources, and tools to enhance your mental health and cultivate mindfulness for a more balanced and peaceful life.</p>
+        </div>
+    </div>
+
+    <!-- Tips Section -->
+    <div class="card shadow-sm mb-4 border-info">
+        <div class="card-body">
+            <h4 class="card-title text-success">Tips for Mental Well-Being</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Practice mindfulness meditation for 10-15 minutes daily.</li>
+                <li class="list-group-item">Engage in deep breathing exercises during stressful moments.</li>
+                <li class="list-group-item">Maintain a gratitude journal to reflect on positive aspects of life.</li>
+                <li class="list-group-item">Spend time in nature to refresh your mind.</li>
+                <li class="list-group-item">Limit screen time and take regular digital detoxes.</li>
+                <li class="list-group-item">Create a daily routine that includes relaxation, work, and play.</li>
+                <li class="list-group-item">Stay connected with loved ones to reduce feelings of isolation.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="card shadow-sm mb-4 border-info">
+        <div class="container my-5">
+            <h1 class="text-center text-primary mb-4">Breathing Exercise</h1>
+            <div class="line-container">
+                <div class="circle" id="circle"></div>
+            </div>
+            <p class="instructions " id="instructions">Click Start to begin</p>
+            <div class="btn-container">
+                <button class="btn btn-success me-2" id="startBtn">Start</button>
+                <button class="btn btn-danger" id="stopBtn">Stop</button>
+            </div> <br>
+            <p class="fs-6 text-danger text-center" ><strong> Before clicking 'start' make sure you are sitting/standing straight & relaxed. Keep your back straight and chest open.</strong></p>
+        </div>
+    </div>
+
+    <!-- YouTube Videos Section -->
+    <div class="card shadow-sm mb-4 border-primary">
+        <div class="card-body">
+            <h4 class="card-title text-info">Watch These Videos</h4>
+            <p>Learn mindfulness and stress relief techniques through these guided videos:</p>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <iframe 
+                        width="100%" 
+                        height="250" 
+                        src="https://www.youtube.com/embed/inpok4MKVLM" 
+                        title="Guided Meditation for Beginners" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <p class="text-center mt-2">Guided Meditation for Beginners</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <iframe 
+                        width="100%" 
+                        height="250" 
+                        src="https://www.youtube.com/embed/ZToicYcHIOU" 
+                        title="5-Minute Stress Relief Meditation" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <p class="text-center mt-2">5-Minute Stress Relief Meditation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recommended Apps Section -->
+    <div class="card shadow-sm mb-4 border-warning">
+        <div class="card-body">
+            <h4 class="card-title text-warning">Top Apps for Mindfulness</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <a href="https://www.headspace.com/" target="_blank" class="text-decoration-none">
+                        <i class="fas fa-mobile-alt me-2"></i>Headspace - Meditation and Sleep
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.calm.com/" target="_blank" class="text-decoration-none">
+                        <i class="fas fa-mobile-alt me-2"></i>Calm - Meditation and Relaxation
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.my.life/" target="_blank" class="text-decoration-none">
+                        <i class="fas fa-mobile-alt me-2"></i>MyLife - Guided Meditation
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Health Blogs Section -->
+    <div class="card shadow-sm mb-4 border-secondary">
+        <div class="card-body">
+            <h4 class="card-title text-secondary">Recommended Blogs</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <a href="https://www.psychologytoday.com/" target="_blank" class="text-decoration-none">
+                        Psychology Today - Mental Health Insights
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.headspace.com/" target="_blank" class="text-decoration-none">
+                        Headspace Blog - Meditation and Mindfulness
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.mindful.org/" target="_blank" class="text-decoration-none">
+                        Mindful.org - Resources for Mindfulness
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.verywellmind.com/" target="_blank" class="text-decoration-none">
+                        Verywell Mind - Mental Health Guidance
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Embedded Blog Section -->
+    <div class="card shadow-sm mb-4 border-dark">
+        <div class="card-body">
+            <h4 class="card-title text-dark">Explore an Informative Blog</h4>
+            <iframe 
+                src="https://www.headspace.com/" 
+                style="width: 100%; height: 500px; border: none; overflow-y: scroll;" 
+                title="Mindful.org Blog">
+            </iframe>
+        </div>
+    </div>
+</div>
+
+
+
+    
+<script>
+    const circle = document.getElementById('circle');
+    const instructions = document.getElementById('instructions');
+    const startBtn = document.getElementById('startBtn');
+    const stopBtn = document.getElementById('stopBtn');
+    let timeoutIds = []; // Store timeouts for cancellation
+
+    const inhaleTime = 4000; // 4 seconds
+    const holdTime = 7000;  // 7 seconds
+    const exhaleTime = 8000; // 8 seconds
+
+    function startBreathing() {
+        stopBreathing(); // Clear any existing timeouts before starting
+        resetCircle(); // Reset circle position at the start
+        breathingCycle();
+    }
+
+    function breathingCycle() {
+        instructions.textContent = "Inhale";
+        moveCircleTo("center", inhaleTime);
+
+        const inhaleTimeout = setTimeout(() => {
+            instructions.textContent = "Hold";
+
+            const holdTimeout = setTimeout(() => {
+                instructions.textContent = "Exhale";
+                moveCircleTo("end", exhaleTime);
+
+                const exhaleTimeout = setTimeout(() => {
+                    // Reset the circle to the start position and repeat
+                    resetCircle();
+                    breathingCycle();
+                }, exhaleTime);
+
+                timeoutIds.push(exhaleTimeout);
+            }, holdTime);
+
+            timeoutIds.push(holdTimeout);
+        }, inhaleTime);
+
+        timeoutIds.push(inhaleTimeout);
+    }
+
+    function stopBreathing() {
+        // Cancel all timeouts
+        timeoutIds.forEach(timeoutId => clearTimeout(timeoutId));
+        timeoutIds = []; // Clear the timeoutIds array
+        instructions.textContent = "Click Start to begin";
+        circle.style.transition = "none";
+        circle.style.left = "0"; // Reset circle to the start
+    }
+
+    function moveCircleTo(position, duration) {
+        const lineWidth = document.querySelector('.line-container').offsetWidth;
+        circle.style.transition = `left ${duration / 1000}s linear`;
+
+        if (position === "center") {
+            circle.style.left = `${lineWidth / 2}px`; // Move to center
+        } else if (position === "end") {
+            circle.style.left = `${lineWidth}px`; // Move to right
+        }
+    }
+
+    function resetCircle() {
+        circle.style.transition = "none";
+        circle.style.left = "0"; // Reset circle to the start
+    }
+
+    // Add event listeners to buttons
+    startBtn.addEventListener('click', startBreathing);
+    stopBtn.addEventListener('click', stopBreathing);
+</script>
+
+
+{% endblock %}

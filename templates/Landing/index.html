@@ -1,0 +1,228 @@
+{% extends 'common_codes/base.html' %}
+{% load static %}
+{% block title %}Welcome to Symptocare{% endblock %}
+{% block main %}
+        <style>
+          body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8; 
+        }
+        .toast-container {
+          position: fixed;
+          top: 10px;
+          left: 50%;
+          transform: translate(-50%);
+          z-index: 10;
+      }
+        
+        .custom-carousel .carousel-item img {
+            object-fit: cover; 
+        }
+        
+        .carousel {
+            max-height: 400px; 
+            overflow: hidden; 
+            
+        } 
+        
+        .text-container {
+            padding-left: 20px; 
+            text-align: left;
+        }
+        
+        
+        .img-d {
+            aspect-ratio: 3 / 4; 
+            height: 400px; 
+            width: auto; 
+        }
+        
+        .content {
+            padding: 2rem;
+            margin-top: 10px; 
+            border-radius: 5px;
+        }
+        
+        .color1 {
+            background-color: var(--bs-primary-bg-subtle);
+        }
+        
+        .features {
+            height:fit-content;
+            width: 50%;
+            border-radius: 15px;
+            margin-bottom: 4rem; 
+            box-shadow: 10px 5px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .img-square {
+            padding-top: 10px;
+            width: 100%; 
+            height: auto;
+            aspect-ratio: 1 / 1; 
+            object-fit: cover; 
+        }
+        .bar{
+            color: white;
+            margin: 5px 5px;
+            width: 5px;
+            height: 30px;
+            display: inline-block; 
+        }
+        
+        .border1{
+            
+            border: 3px solid white;
+            border-radius: 5px;
+        }
+        
+        @media(max-width:768px){
+            .content>img{
+                height:70%;
+                width:40%;
+            }
+
+            .features>img {
+                height:40%;
+                width: 40%;
+                
+            }
+            .toast-container {
+                width: 50%
+            }
+        }
+        </style>
+        <!-- Welcome Section -->
+       <!-- Toast Notification -->
+    <div class="toast-container">
+      <div id="welcomeToast" class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="d-flex">
+              <div class="toast-body">
+                  Welcome to SymptoCare! Let's take care of your health together.
+              </div>
+              <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+      </div>
+  </div>
+
+      <div class="container ">
+            <div class="row align-items-center p-2">
+              <!-- Carousel on the Left -->
+              <div class="col-md-6">
+                <div id="carouselExampleAutoplaying" class="carousel slide custom-carousel" data-bs-ride="carousel" data-bs-interval="2000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/c1.jpg' %}" class="d-block w-100" alt="Carousel Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/c2.jpg' %}" class="d-block w-100" alt="Carousel Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/symptom_checker.jpg' %}" class="d-block w-100" alt="Carousel Image 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+    
+              <!-- Text and Buttons on the Right -->
+              <div class="col-md-5 d-flex flex-column justify-content-center text-container">
+                <h2 class="fw-bold">Welcome to SymptoCare</h2>
+                <p class="lead">We provide accurate health information and personalized healthcare tips for your well-being.</p>
+                <div>
+                  <a href="{% url "signup" %}" class="btn btn-primary btn-lg me-2 bg-info border-0">Get Started</a>
+                  <a href="{% url 'about' %}" class="btn btn-outline-secondary btn-lg">Learn More</a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+    
+           <!-- Features Section -->
+
+           <div class="features bg-warning-subtle container-fluid">
+            <div class=" container-sm row justify-content-center text-light">
+                <div class="col-md-4 text-center">
+                    <div class="box">
+                        <img src="{% static 'images\fc1.jpg' %}" class="img-fluid img-square" alt="">
+                        <p class="text-black fs-9">Risk Assesment Tool</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="box">
+                        <img src="{% static 'images/work_life_balanc.jpg' %}" class=" img-fluid img-square" alt="">
+                        <p class="text-black fs-9">Work Life Balance</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="box">
+                        <img src="{% static 'images/ft.jpg' %}" class="img-fluid img-square" alt="">
+                        <p class="text-black fs-9">Time Based Suggestions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Feedback Section -->
+        
+        <div class="container-md d-flex align-items-center color1 content">
+            <div class="flex-grow-1">
+              <span class="border border-white">
+              <p class="m-0 p-4 text-start border1 p-4">
+                  <span class="fs-2 bold">SymptoCare</span> offers a user-friendly and efficient disease diagnosis system. By analyzing symptoms provided by the user along with hidden BMI data, it delivers personalized health insights. This feature helps users understand potential health risks and suggests preventive measures and lifestyle adjustments to maintain well-being. The diagnosis process is simple yet powerful, aimed at promoting early detection of chronic conditions and offering guidance on managing health more effectively.
+                </p>
+              </span>
+            </div>
+            <img src="{% static 'images/card1.jpg' %}" class="rounded float-start img-d ms-3" alt="">
+        </div>
+      
+    
+        <div class="container-sm d-flex align-items-center color1 content">
+            <img src="{% static 'images/apple.jpg' %}" class="rounded float-start img-d ms-3 " alt="">
+            <div class="flex-grow-1"><br>
+                <p class="m-0 p-4 text-start border1 p-4">
+                  <span class="fs-2 bold ">SymptoCare</span> provides personalized food and diet recommendations based on a user's health profile and BMI analysis. By considering potential health risks, dietary restrictions, and the user's body structure, this feature offers tailored meal plans that promote a balanced and nutritious lifestyle. These suggestions aim to support users in achieving optimal health, preventing diet-related illnesses, and improving overall quality of life.
+                </p>
+              </div>
+          </div>
+    
+        <div class="container-sm d-flex align-items-center color1 content">
+            <div class="flex-grow-1">
+                <p class="m-0 p-4 text-start border1 p-4">
+                  <span class="fs-2 bold">SymptoCare</span>assists users in maintaining a balanced lifestyle through its integrated Work-Life Balance feature.This feature helps users plan their daily tasks by incorporating notifications for Deep Work Sessions and Nap Sessions, ensuring they stay productive and rejuvenated throughout the day.Users can focus on their work schedules, set priorities, and manage time more efficiently with guided deep work notifications, while restorative nap reminders boost cognitive function and energy levels. This feature ensures that users maintain a healthy balance between their personal and professional life, which is critical for overall health and well-being.
+                </p>
+            </div>
+            <img src="{% static 'images/td1.jpg' %}" class="rounded float-start img-d ms-3" alt=""> 
+        </div>
+    
+           <div class="container-sm d-flex align-items-center bg-secondary-subtle content">
+            <div class="flex-grow-1">
+              
+                <p class="m-0 p-4 text-start">
+                    <span class="fs-4 bold text-dark pb-2">One of our users says,</span>
+                    <br>
+                    <span class="fst-italic text-dark"> <b>"</b>After using SymptoCare, I was able to quickly understand potential health issues based on my symptoms and get personalized tips on how to manage them. The website provided a deeper insight and assistance into my health status, helping me adjust my diet and lifestyle accordingly. It's such a helpful tool for anyone looking to take better care of their health!<b>"</b></span>
+                </p>
+            </div>
+          </div>
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Show the toast when the page loads
+      document.addEventListener('DOMContentLoaded', function () {
+          var toastElement = document.getElementById('welcomeToast');
+          var toast = new bootstrap.Toast(toastElement);
+          toast.show();
+      });
+  </script>
+
+    {% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'common_codes/base.html' %}
+{% load static %}
+{% block title %}About Us{% endblock %}
+{% block main %}
+    <style>
+       
+        .container {
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        h2 {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+    </style>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">About Us</h2>
+        
+        <!-- Introduction Section -->
+        <p class="text-center">
+            Welcome to <strong>SymptoCare</strong>, your web-based partner in personalized health insights and symptom analysis. Our platform offers a simple yet effective approach to managing personal health, empowering users with insights and guidance tailored to their unique health profiles.
+        </p>
+
+        <!-- Mission Section -->
+        <div class="row mt-4">
+            <div class="col-md-6 d-flex align-items-center">
+                <div>
+                    <h4>Our Mission</h4>
+                    <p>
+                        At SymptoCare, we believe that everyone deserves accessible and personalized health insights. Our mission is to provide an intuitive, data-driven platform that promotes proactive health management through easy-to-understand recommendations and resources for daily well-being.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'images/mission.jpg' %}" alt="Mission Image" class="img-fluid rounded">
+            </div>
+        </div>
+        
+        <!-- Features Overview Section -->
+        <div class="mt-4">
+            <h4>What We Offer</h4>
+            <p>
+                Our system leverages inputs such as symptoms, age, height, and weight to deliver personalized health guidance. With a hidden BMI-based approach, users receive health suggestions that align with their needs without any overwhelming data exposure. Key features include:
+            </p>
+            <ul>
+                <li><strong>Risk assesment Tool:</strong> Understand and monitor your symptoms with insightful suggestions.</li>
+                <li><strong>Personalized Tips:</strong> Receive dietary, exercise, and lifestyle tips aligned to your health profile.</li>
+                <li><strong>Time-based Suggestions:</strong>We give time based suggestions for various activity and diet.</li>
+                <li><strong>Mindfullness</strong> Helps keeping you motivated, makes you practice mindfullness.</li>
+            </ul>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock %}
