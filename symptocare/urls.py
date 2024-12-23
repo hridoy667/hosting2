@@ -23,7 +23,6 @@ from Landing_page import views
 
 urlpatterns = [
     path('admin/',admin.site.urls),
-    path('landing/', include('Landing_page.urls')),
     path('', views.landing,name="landing"),
     path('su/', include('signup.urls')),
     path('dashbord/', include('dashbord.urls')),
