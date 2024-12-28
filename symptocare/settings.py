@@ -18,6 +18,9 @@ DEBUG = os.getenv('DEBUG', 'False') == 'True'
 # Add your live domain here in production
 ALLOWED_HOSTS = ['.up.railway.app', 'localhost', '127.0.0.1']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://symptocare.up.railway.app',  # Add your Railway domain here
+]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://symptocare.up.railway.app',  # Add your Railway domain here
