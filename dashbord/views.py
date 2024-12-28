@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.utils import timezone
 from datetime import datetime
 from bmiInput.models import UserProfile, BMISuggestion
 from .models import TimeBasedSuggestion, TimeBasedActivity
@@ -43,7 +44,7 @@ def dashbord(request):
         other_health_tips = suggestion.other_health_tips if suggestion else "No additional tips available."
 
         # Determine current time period
-        current_hour = datetime.now().hour
+        current_hour = timezone.localtime().hour
         if 5 <= current_hour < 11:
             current_time_period = "Morning"
         elif 11 <= current_hour < 15:

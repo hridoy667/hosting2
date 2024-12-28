@@ -12,6 +12,8 @@
         <style>
             body {
                 transition: background-color 0.3s ease, color 0.3s ease;
+                --bs-font-size-lg: 1.25rem; /* Large font size */
+                --bs-font-size-sm: 0.775rem; /* Small font size */
             }
             .footer {
                 background-color: #f8f9fa;
@@ -38,6 +40,18 @@
             .btn-logout {
                 margin-left: 15px;
             }
+            .navbar .btn-outline-light:hover {
+                background-color: white;
+                color: #007b83;
+            }
+            @media (max-width: 768px) {
+                body{
+                  font-size: 1rem;
+                }
+                p{
+                  font-weight:400;
+                }
+            }          
         </style>
     </head>
     <body>
@@ -51,13 +65,13 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'dashbord' %}">Dashboard</a>
+                            <a class="nav-link {% if request.path == '/dashbord/' %}active{% endif %}" href="{% url 'dashbord' %}">Dashboard</a>
+                          </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/healthcare/' %}active{% endif %}" href="{% url 'healthcare' %}">Healthcare</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'healthcare' %}">Healthcare</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'mindfullness' %}">Mental Wellness</a>
+                            <a class="nav-link {% if request.path == '/dashbord/m/' %}active{% endif %}" href="{% url 'mindfullness' %}">Mental Wellness</a>
                         </li>
                     </ul>
                     

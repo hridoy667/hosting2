@@ -57,7 +57,7 @@
 
     <div class="container ">
         <!-- Dynamic Greeting -->
-        <h1 class="text-center my-1">{{ greeting }}, {{ user.last_name }}!</h1>
+        <h1 class="text-center my-1 fs">{{ greeting }}, {{ user.first_name }}!</h1>
 
         <!-- Weather Information Section -->
         <div class="row justify-content-end">
@@ -113,7 +113,7 @@
                             <h4 class="fw-bold">{{ activity.activity_type }}</h4>
                             <p>{{ activity.suggestion_text }}</p>
                         {% empty %}
-
+                            <h5>Quote of the day:</h5>  
                             <p>Balance is not something you find, it's something you create.</p>
                         {% endfor %}
                     </div>
