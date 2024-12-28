@@ -20,10 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from Landing_page import views
 from Landing_page.views import landing
-<<<<<<< HEAD
 
-=======
->>>>>>> 30c4d5f32920ed00070db16bd2f6a17fef29b086
 
 urlpatterns = [
     path('admin/',admin.site.urls),
