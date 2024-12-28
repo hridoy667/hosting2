@@ -13,7 +13,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-tq$hv0)^o(##@#^q5n^w1g%6_&+0_z50127+%f^+rs4si=nd&k')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', 'True') == 'True'
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 # Add your live domain here in production
 ALLOWED_HOSTS = ['.up.railway.app', 'localhost', '127.0.0.1']
