@@ -1,0 +1,625 @@
+Folder PATH listing
+Volume serial number is C853-1D24
+C:.
+³   db.sqlite3
+³   manage.py
+³   Procfile
+³   project_structure.txt
+³   requirements.txt
+³   runtime.txt
+³   
+ÃÄÄÄabout_us
+³   ³   admin.py
+³   ³   apps.py
+³   ³   models.py
+³   ³   tests.py
+³   ³   urls.py
+³   ³   views.py
+³   ³   __init__.py
+³   ³   
+³   ÃÄÄÄmigrations
+³   ³   ³   __init__.py
+³   ³   ³   
+³   ³   ÀÄÄÄ__pycache__
+³   ³           __init__.cpython-313.pyc
+³   ³           
+³   ÀÄÄÄ__pycache__
+³           admin.cpython-313.pyc
+³           apps.cpython-313.pyc
+³           models.cpython-313.pyc
+³           urls.cpython-313.pyc
+³           views.cpython-313.pyc
+³           __init__.cpython-313.pyc
+³           
+ÃÄÄÄbmiInput
+³   ³   admin.py
+³   ³   apps.py
+³   ³   forms.py
+³   ³   models.py
+³   ³   tests.py
+³   ³   urls.py
+³   ³   views.py
+³   ³   __init__.py
+³   ³   
+³   ÃÄÄÄmigrations
+³   ³   ³   0001_initial.py
+³   ³   ³   0002_delete_userprofile.py
+³   ³   ³   0003_initial.py
+³   ³   ³   0004_delete_userprofile.py
+³   ³   ³   0005_initial.py
+³   ³   ³   0006_delete_userprofile.py
+³   ³   ³   0007_initial.py
+³   ³   ³   0008_alter_userprofile_height_unit_and_more.py
+³   ³   ³   0009_bmisuggestion.py
+³   ³   ³   0010_remove_bmisuggestion_diet_suggestion_and_more.py
+³   ³   ³   0011_remove_dietsubcategory_bmi_subcategory_and_more.py
+³   ³   ³   0012_bmisuggestion_sleep_suggestion_and_more.py
+³   ³   ³   0013_alter_userprofile_height_unit.py
+³   ³   ³   0014_userprofile_disease_history.py
+³   ³   ³   0015_userprofile_profile_image.py
+³   ³   ³   0016_alter_userprofile_profile_image.py
+³   ³   ³   0017_remove_userprofile_profile_image_and_more.py
+³   ³   ³   __init__.py
+³   ³   ³   
+³   ³   ÀÄÄÄ__pycache__
+³   ³           0001_initial.cpython-313.pyc
+³   ³           0002_delete_userprofile.cpython-313.pyc
+³   ³           0003_initial.cpython-313.pyc
+³   ³           0004_delete_userprofile.cpython-313.pyc
+³   ³           0005_initial.cpython-313.pyc
+³   ³           0006_delete_userprofile.cpython-313.pyc
+³   ³           0007_initial.cpython-313.pyc
+³   ³           0008_alter_userprofile_height_unit_and_more.cpython-313.pyc
+³   ³           0009_bmisuggestion.cpython-313.pyc
+³   ³           0010_remove_bmisuggestion_diet_suggestion_and_more.cpython-313.pyc
+³   ³           0011_remove_dietsubcategory_bmi_subcategory_and_more.cpython-313.pyc
+³   ³           0012_bmisuggestion_sleep_suggestion_and_more.cpython-313.pyc
+³   ³           0013_alter_userprofile_height_unit.cpython-313.pyc
+³   ³           0014_userprofile_disease_history.cpython-313.pyc
+³   ³           0015_userprofile_profile_image.cpython-313.pyc
+³   ³           0016_alter_userprofile_profile_image.cpython-313.pyc
+³   ³           0017_remove_userprofile_profile_image_and_more.cpython-313.pyc
+³   ³           __init__.cpython-313.pyc
+³   ³           
+³   ÀÄÄÄ__pycache__
+³           admin.cpython-313.pyc
+³           apps.cpython-313.pyc
+³           forms.cpython-313.pyc
+³           models.cpython-313.pyc
+³           urls.cpython-313.pyc
+³           views.cpython-313.pyc
+³           __init__.cpython-313.pyc
+³           
+ÃÄÄÄcontact_us
+³   ³   admin.py
+³   ³   apps.py
+³   ³   models.py
+³   ³   tests.py
+³   ³   urls.py
+³   ³   views.py
+³   ³   __init__.py
+³   ³   
+³   ÃÄÄÄmigrations
+³   ³   ³   0001_initial.py
+³   ³   ³   __init__.py
+³   ³   ³   
+³   ³   ÀÄÄÄ__pycache__
+³   ³           0001_initial.cpython-313.pyc
+³   ³           __init__.cpython-313.pyc
+³   ³           
+³   ÀÄÄÄ__pycache__
+³           admin.cpython-313.pyc
+³           apps.cpython-313.pyc
+³           models.cpython-313.pyc
+³           urls.cpython-313.pyc
+³           views.cpython-313.pyc
+³           __init__.cpython-313.pyc
+³           
+ÃÄÄÄdashbord
+³   ³   admin.py
+³   ³   apps.py
+³   ³   models.py
+³   ³   tests.py
+³   ³   urls.py
+³   ³   views.py
+³   ³   __init__.py
+³   ³   
+³   ÃÄÄÄmigrations
+³   ³   ³   0001_initial.py
+³   ³   ³   0002_delete_bmidailyroutine.py
+³   ³   ³   0003_initial.py
+³   ³   ³   0004_timebasedsuggestion_and_more.py
+³   ³   ³   0005_bmicategory_disease_and_more.py
+³   ³   ³   0006_alter_timebasedsuggestion_bmi_category_and_more.py
+³   ³   ³   0007_timebasedactivity.py
+³   ³   ³   0008_remove_timebasedsuggestion_deep_work_suggestion_and_more.py
+³   ³   ³   0009_alter_timebasedsuggestion_bmi_category_and_more.py
+³   ³   ³   0010_alter_timebasedsuggestion_disease_delete_disease.py
+³   ³   ³   0011_rename_water_intake_timebasedsuggestion_exercise.py
+³   ³   ³   0012_alter_timebasedsuggestion_exercise_and_more.py
+³   ³   ³   0013_alter_timebasedactivity_time_period.py
+³   ³   ³   0014_alter_timebasedactivity_activity_type.py
+³   ³   ³   __init__.py
+³   ³   ³   
+³   ³   ÀÄÄÄ__pycache__
+³   ³           0001_initial.cpython-313.pyc
+³   ³           0002_delete_bmidailyroutine.cpython-313.pyc
+³   ³           0003_initial.cpython-313.pyc
+³   ³           0004_timebasedsuggestion_and_more.cpython-313.pyc
+³   ³           0005_bmicategory_disease_and_more.cpython-313.pyc
+³   ³           0006_alter_timebasedsuggestion_bmi_category_and_more.cpython-313.pyc
+³   ³           0007_timebasedactivity.cpython-313.pyc
+³   ³           0008_remove_timebasedsuggestion_deep_work_suggestion_and_more.cpython-313.pyc
+³   ³           0009_alter_timebasedsuggestion_bmi_category_and_more.cpython-313.pyc
+³   ³           0010_alter_timebasedsuggestion_disease_delete_disease.cpython-313.pyc
+³   ³           0011_rename_water_intake_timebasedsuggestion_exercise.cpython-313.pyc
+³   ³           0012_alter_timebasedsuggestion_exercise_and_more.cpython-313.pyc
+³   ³           0013_alter_timebasedactivity_time_period.cpython-313.pyc
+³   ³           0014_alter_timebasedactivity_activity_type.cpython-313.pyc
+³   ³           __init__.cpython-313.pyc
+³   ³           
+³   ÀÄÄÄ__pycache__
+³           admin.cpython-313.pyc
+³           apps.cpython-313.pyc
+³           models.cpython-313.pyc
+³           urls.cpython-313.pyc
+³           views.cpython-313.pyc
+³           __init__.cpython-313.pyc
+³           
+ÃÄÄÄdiagnosis
+³   ³   admin.py
+³   ³   apps.py
+³   ³   models.py
+³   ³   tests.py
+³   ³   urls.py
+³   ³   views.py
+³   ³   __init__.py
+³   ³   
+³   ÃÄÄÄmigrations
+³   ³   ³   __init__.py
+³   ³   ³   
+³   ³   ÀÄÄÄ__pycache__
+³   ³           __init__.cpython-313.pyc
+³   ³           
+³   ÃÄÄÄml_models
+³   ³       heart_disease_model.pkl
+³   ³       
+³   ÀÄÄÄ__pycache__
+³           admin.cpython-313.pyc
+³           apps.cpython-313.pyc
+³           ml_model.cpython-313.pyc
+³           models.cpython-313.pyc
+³           urls.cpython-313.pyc
+³           views.cpython-313.pyc
+³           __init__.cpython-313.pyc
+³           
+ÃÄÄÄfeatures
+³   ³   admin.py
+³   ³   apps.py
+³   ³   models.py
+³   ³   tests.py
+³   ³   urls.py
+³   ³   views.py
+³   ³   __init__.py
+³   ³   
+³   ÃÄÄÄmigrations
+³   ³   ³   __init__.py
+³   ³   ³   
+³   ³   ÀÄÄÄ__pycache__
+³   ³           __init__.cpython-313.pyc
+³   ³           
+³   ÀÄÄÄ__pycache__
+³           admin.cpython-313.pyc
+³           apps.cpython-313.pyc
+³           models.cpython-313.pyc
+³           urls.cpython-313.pyc
+³           views.cpython-313.pyc
+³           __init__.cpython-313.pyc
+³           
+ÃÄÄÄhealthcare
+³   ³   admin.py
+³   ³   apps.py
+³   ³   models.py
+³   ³   tests.py
+³   ³   urls.py
+³   ³   views.py
+³   ³   __init__.py
+³   ³   
+³   ÃÄÄÄmigrations
+³   ³   ³   0001_initial.py
+³   ³   ³   0002_diseasecategory_alter_healthcaresuggestion_options_and_more.py
+³   ³   ³   0003_remove_healthcaresuggestion_created_at_and_more.py
+³   ³   ³   __init__.py
+³   ³   ³   
+³   ³   ÀÄÄÄ__pycache__
+³   ³           0001_initial.cpython-313.pyc
+³   ³           0002_diseasecategory_alter_healthcaresuggestion_options_and_more.cpython-313.pyc
+³   ³           0003_remove_healthcaresuggestion_created_at_and_more.cpython-313.pyc
+³   ³           __init__.cpython-313.pyc
+³   ³           
+³   ÀÄÄÄ__pycache__
+³           admin.cpython-313.pyc
+³           apps.cpython-313.pyc
+³           models.cpython-313.pyc
+³           urls.cpython-313.pyc
+³           views.cpython-313.pyc
+³           __init__.cpython-313.pyc
+³           
+ÃÄÄÄLanding_page
+³   ³   admin.py
+³   ³   apps.py
+³   ³   models.py
+³   ³   tests.py
+³   ³   urls.py
+³   ³   views.py
+³   ³   __init__.py
+³   ³   
+³   ÃÄÄÄmigrations
+³   ³   ³   __init__.py
+³   ³   ³   
+³   ³   ÀÄÄÄ__pycache__
+³   ³           __init__.cpython-313.pyc
+³   ³           
+³   ÀÄÄÄ__pycache__
+³           admin.cpython-313.pyc
+³           apps.cpython-313.pyc
+³           models.cpython-313.pyc
+³           urls.cpython-313.pyc
+³           views.cpython-313.pyc
+³           __init__.cpython-313.pyc
+³           
+ÃÄÄÄsignin
+³   ³   admin.py
+³   ³   apps.py
+³   ³   models.py
+³   ³   tests.py
+³   ³   urls.py
+³   ³   views.py
+³   ³   __init__.py
+³   ³   
+³   ÃÄÄÄmigrations
+³   ³   ³   __init__.py
+³   ³   ³   
+³   ³   ÀÄÄÄ__pycache__
+³   ³           __init__.cpython-313.pyc
+³   ³           
+³   ÀÄÄÄ__pycache__
+³           admin.cpython-313.pyc
+³           apps.cpython-313.pyc
+³           models.cpython-313.pyc
+³           urls.cpython-313.pyc
+³           views.cpython-313.pyc
+³           __init__.cpython-313.pyc
+³           
+ÃÄÄÄsignup
+³   ³   admin.py
+³   ³   apps.py
+³   ³   forms.py
+³   ³   models.py
+³   ³   tests.py
+³   ³   urls.py
+³   ³   views.py
+³   ³   __init__.py
+³   ³   
+³   ÃÄÄÄmigrations
+³   ³   ³   __init__.py
+³   ³   ³   
+³   ³   ÀÄÄÄ__pycache__
+³   ³           __init__.cpython-313.pyc
+³   ³           
+³   ÀÄÄÄ__pycache__
+³           admin.cpython-313.pyc
+³           apps.cpython-313.pyc
+³           forms.cpython-313.pyc
+³           models.cpython-313.pyc
+³           urls.cpython-313.pyc
+³           views.cpython-313.pyc
+³           __init__.cpython-313.pyc
+³           
+ÃÄÄÄstatic
+³   ÃÄÄÄcss
+³   ³   ³   bootstrap.min.css
+³   ³   ³   commonstyles.css
+³   ³   ³   
+³   ³   ÀÄÄÄlanding
+³   ÃÄÄÄimages
+³   ³   ³   apple.jpg
+³   ³   ³   bg1.jpg
+³   ³   ³   c1.jpg
+³   ³   ³   c2.jpg
+³   ³   ³   card1.jpg
+³   ³   ³   cityscape.jpg
+³   ³   ³   dashboard.jpg
+³   ³   ³   diet.jpg
+³   ³   ³   fc1.jpg
+³   ³   ³   fc2.jpg
+³   ³   ³   fe1.jpg
+³   ³   ³   ft.jpg
+³   ³   ³   healthtips.jpg
+³   ³   ³   humidity.jpg
+³   ³   ³   mission.jpg
+³   ³   ³   symptom_checker.jpg
+³   ³   ³   td1.jpg
+³   ³   ³   thermometer.jpg
+³   ³   ³   u1.jpg
+³   ³   ³   wlb.jpg
+³   ³   ³   work_life_balanc.jpg
+³   ³   ³   
+³   ³   ÃÄÄÄfonts
+³   ³   ³       Alata.ttf
+³   ³   ³       
+³   ³   ÀÄÄÄpng
+³   ³           logo-color.png
+³   ³           logo-grayscale-inverted.png
+³   ³           logo-grayscale.png
+³   ³           logo-no-background.jpg
+³   ³           logo-no-background.png
+³   ³           
+³   ÀÄÄÄscripts
+³           bootstrap.bundle.min.js
+³           
+ÃÄÄÄstaticfiles
+³   ÃÄÄÄadmin
+³   ³   ÃÄÄÄcss
+³   ³   ³   ³   autocomplete.css
+³   ³   ³   ³   base.css
+³   ³   ³   ³   changelists.css
+³   ³   ³   ³   dark_mode.css
+³   ³   ³   ³   dashboard.css
+³   ³   ³   ³   forms.css
+³   ³   ³   ³   login.css
+³   ³   ³   ³   nav_sidebar.css
+³   ³   ³   ³   responsive.css
+³   ³   ³   ³   responsive_rtl.css
+³   ³   ³   ³   rtl.css
+³   ³   ³   ³   unusable_password_field.css
+³   ³   ³   ³   widgets.css
+³   ³   ³   ³   
+³   ³   ³   ÀÄÄÄvendor
+³   ³   ³       ÀÄÄÄselect2
+³   ³   ³               LICENSE-SELECT2.md
+³   ³   ³               select2.css
+³   ³   ³               select2.min.css
+³   ³   ³               
+³   ³   ÃÄÄÄimg
+³   ³   ³   ³   calendar-icons.svg
+³   ³   ³   ³   icon-addlink.svg
+³   ³   ³   ³   icon-alert.svg
+³   ³   ³   ³   icon-calendar.svg
+³   ³   ³   ³   icon-changelink.svg
+³   ³   ³   ³   icon-clock.svg
+³   ³   ³   ³   icon-deletelink.svg
+³   ³   ³   ³   icon-hidelink.svg
+³   ³   ³   ³   icon-no.svg
+³   ³   ³   ³   icon-unknown-alt.svg
+³   ³   ³   ³   icon-unknown.svg
+³   ³   ³   ³   icon-viewlink.svg
+³   ³   ³   ³   icon-yes.svg
+³   ³   ³   ³   inline-delete.svg
+³   ³   ³   ³   LICENSE
+³   ³   ³   ³   README.txt
+³   ³   ³   ³   search.svg
+³   ³   ³   ³   selector-icons.svg
+³   ³   ³   ³   sorting-icons.svg
+³   ³   ³   ³   tooltag-add.svg
+³   ³   ³   ³   tooltag-arrowright.svg
+³   ³   ³   ³   
+³   ³   ³   ÀÄÄÄgis
+³   ³   ³           move_vertex_off.svg
+³   ³   ³           move_vertex_on.svg
+³   ³   ³           
+³   ³   ÀÄÄÄjs
+³   ³       ³   actions.js
+³   ³       ³   autocomplete.js
+³   ³       ³   calendar.js
+³   ³       ³   cancel.js
+³   ³       ³   change_form.js
+³   ³       ³   core.js
+³   ³       ³   filters.js
+³   ³       ³   inlines.js
+³   ³       ³   jquery.init.js
+³   ³       ³   nav_sidebar.js
+³   ³       ³   popup_response.js
+³   ³       ³   prepopulate.js
+³   ³       ³   prepopulate_init.js
+³   ³       ³   SelectBox.js
+³   ³       ³   SelectFilter2.js
+³   ³       ³   theme.js
+³   ³       ³   unusable_password_field.js
+³   ³       ³   urlify.js
+³   ³       ³   
+³   ³       ÃÄÄÄadmin
+³   ³       ³       DateTimeShortcuts.js
+³   ³       ³       RelatedObjectLookups.js
+³   ³       ³       
+³   ³       ÀÄÄÄvendor
+³   ³           ÃÄÄÄjquery
+³   ³           ³       jquery.js
+³   ³           ³       jquery.min.js
+³   ³           ³       LICENSE.txt
+³   ³           ³       
+³   ³           ÃÄÄÄselect2
+³   ³           ³   ³   LICENSE.md
+³   ³           ³   ³   select2.full.js
+³   ³           ³   ³   select2.full.min.js
+³   ³           ³   ³   
+³   ³           ³   ÀÄÄÄi18n
+³   ³           ³           af.js
+³   ³           ³           ar.js
+³   ³           ³           az.js
+³   ³           ³           bg.js
+³   ³           ³           bn.js
+³   ³           ³           bs.js
+³   ³           ³           ca.js
+³   ³           ³           cs.js
+³   ³           ³           da.js
+³   ³           ³           de.js
+³   ³           ³           dsb.js
+³   ³           ³           el.js
+³   ³           ³           en.js
+³   ³           ³           es.js
+³   ³           ³           et.js
+³   ³           ³           eu.js
+³   ³           ³           fa.js
+³   ³           ³           fi.js
+³   ³           ³           fr.js
+³   ³           ³           gl.js
+³   ³           ³           he.js
+³   ³           ³           hi.js
+³   ³           ³           hr.js
+³   ³           ³           hsb.js
+³   ³           ³           hu.js
+³   ³           ³           hy.js
+³   ³           ³           id.js
+³   ³           ³           is.js
+³   ³           ³           it.js
+³   ³           ³           ja.js
+³   ³           ³           ka.js
+³   ³           ³           km.js
+³   ³           ³           ko.js
+³   ³           ³           lt.js
+³   ³           ³           lv.js
+³   ³           ³           mk.js
+³   ³           ³           ms.js
+³   ³           ³           nb.js
+³   ³           ³           ne.js
+³   ³           ³           nl.js
+³   ³           ³           pl.js
+³   ³           ³           ps.js
+³   ³           ³           pt-BR.js
+³   ³           ³           pt.js
+³   ³           ³           ro.js
+³   ³           ³           ru.js
+³   ³           ³           sk.js
+³   ³           ³           sl.js
+³   ³           ³           sq.js
+³   ³           ³           sr-Cyrl.js
+³   ³           ³           sr.js
+³   ³           ³           sv.js
+³   ³           ³           th.js
+³   ³           ³           tk.js
+³   ³           ³           tr.js
+³   ³           ³           uk.js
+³   ³           ³           vi.js
+³   ³           ³           zh-CN.js
+³   ³           ³           zh-TW.js
+³   ³           ³           
+³   ³           ÀÄÄÄxregexp
+³   ³                   LICENSE.txt
+³   ³                   xregexp.js
+³   ³                   xregexp.min.js
+³   ³                   
+³   ÃÄÄÄcss
+³   ³       bootstrap.min.css
+³   ³       commonstyles.css
+³   ³       
+³   ÃÄÄÄimages
+³   ³   ³   apple.jpg
+³   ³   ³   bg1.jpg
+³   ³   ³   c1.jpg
+³   ³   ³   c2.jpg
+³   ³   ³   card1.jpg
+³   ³   ³   cityscape.jpg
+³   ³   ³   dashboard.jpg
+³   ³   ³   diet.jpg
+³   ³   ³   fc1.jpg
+³   ³   ³   fc2.jpg
+³   ³   ³   fe1.jpg
+³   ³   ³   ft.jpg
+³   ³   ³   healthtips.jpg
+³   ³   ³   humidity.jpg
+³   ³   ³   mission.jpg
+³   ³   ³   symptom_checker.jpg
+³   ³   ³   td1.jpg
+³   ³   ³   thermometer.jpg
+³   ³   ³   u1.jpg
+³   ³   ³   wlb.jpg
+³   ³   ³   work_life_balanc.jpg
+³   ³   ³   
+³   ³   ÃÄÄÄfonts
+³   ³   ³       Alata.ttf
+³   ³   ³       
+³   ³   ÀÄÄÄpng
+³   ³           logo-color.png
+³   ³           logo-grayscale-inverted.png
+³   ³           logo-grayscale.png
+³   ³           logo-no-background.jpg
+³   ³           logo-no-background.png
+³   ³           
+³   ÀÄÄÄjs
+³           bootstrap.bundle.min.js
+³           
+ÃÄÄÄsymptocare
+³   ³   asgi.py
+³   ³   settings.py
+³   ³   urls.py
+³   ³   wsgi.py
+³   ³   __init__.py
+³   ³   
+³   ÀÄÄÄ__pycache__
+³           settings.cpython-313.pyc
+³           urls.cpython-313.pyc
+³           wsgi.cpython-313.pyc
+³           __init__.cpython-313.pyc
+³           
+ÃÄÄÄtemplates
+³   ³   contact.html
+³   ³   diagnopage.html
+³   ³   features.html
+³   ³   prediction_form.html
+³   ³   results.html
+³   ³   
+³   ÃÄÄÄAbout
+³   ³       about.html
+³   ³       
+³   ÃÄÄÄcommon_codes
+³   ³       base.html
+³   ³       interface.html
+³   ³       
+³   ÃÄÄÄdashbord
+³   ³       dashbord.html
+³   ³       mindfullness.html
+³   ³       
+³   ÃÄÄÄforms
+³   ³       bmiinput.html
+³   ³       signin.html
+³   ³       signup.html
+³   ³       
+³   ÃÄÄÄhealthcare
+³   ³       healthcare.html
+³   ³       
+³   ÃÄÄÄLanding
+³   ³       index.html
+³   ³       
+³   ÃÄÄÄToDo
+³   ³       todolist.html
+³   ³       
+³   ÀÄÄÄuserprofile
+³           edit_profile.html
+³           view_profile.html
+³           
+ÀÄÄÄuserprofile
+    ³   admin.py
+    ³   apps.py
+    ³   forms.py
+    ³   models.py
+    ³   tests.py
+    ³   urls.py
+    ³   views.py
+    ³   __init__.py
+    ³   
+    ÃÄÄÄmigrations
+    ³   ³   __init__.py
+    ³   ³   
+    ³   ÀÄÄÄ__pycache__
+    ³           __init__.cpython-313.pyc
+    ³           
+    ÀÄÄÄ__pycache__
+            admin.cpython-313.pyc
+            apps.cpython-313.pyc
+            forms.cpython-313.pyc
+            models.cpython-313.pyc
+            urls.cpython-313.pyc
+            views.cpython-313.pyc
+            __init__.cpython-313.pyc
+            
