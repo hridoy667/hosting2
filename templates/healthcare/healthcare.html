@@ -5,10 +5,24 @@
     <style>
         .acrd {
             padding: 10px 20px; 
+            width: 100%;
         }
         .accordion-button {
             text-align: center; 
         }
+        @media (max-width: 576px) { /* Small devices */
+            .acrd {
+                width: 100%; /* Adjust width as per your preference */
+                margin: 0 auto; /* Center the card horizontally */
+                padding: 5px 7px;
+            }
+
+            .responsive-card{
+                padding:0
+            }
+          }
+
+          
     </style> 
     <div class="container my-5 fs-5 ">
         <h2 class="text-center text-primary mb-4">Healthcare Suggestions</h2>
@@ -43,13 +57,11 @@
                     </button>
                   </h2>
                   <div id="collapseSingle" class="accordion-collapse collapse acrd" data-bs-parent="#singleAccordion">
-                    <div class="accordion-body">
+                    <div class="accordion-body responsive-card">
                         {% if disease_category %}
                         <div class="card shadow-sm mb-4 acrd bg-secondary text-white">
-    
-                                <h5 class="card-title text-center text-white"><strong>{{ disease_category.name }}</strong></h5>
-                                <p class="card-text text-muted text-center">{{ disease_category.description|safe }}</p>
-                            
+                            <h5 class="card-title text-center text-white"><strong>{{ disease_category.name }}</strong></h5>
+                            <p class="card-text text-muted text-center bg-warning">{{ disease_category.description|safe }}</p>
                         </div>
                     {% endif %}
                     </div>
