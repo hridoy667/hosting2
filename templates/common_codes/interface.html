@@ -78,9 +78,9 @@
                     
                     <div class="d-flex align-items-center ms-3">
                         <a href="{% url 'viewp' %}" class="profile-link">
-                            <span>{{ user.last_name }}'s Profile</span>
+                            <span>{{ user.username }}'s Profile</span>
                         </a>
-                        <a href="{% url 'logout' %}" class="btn btn-sm btn-light btn-logout bg-warning">Logout</a>
+                        <a href="{% url 'logout' %}" class="btn btn-sm btn-light btn-logout bg-warning text-white"><strong>Logout</strong></a>
                     </div>
                 </div>
             </div>

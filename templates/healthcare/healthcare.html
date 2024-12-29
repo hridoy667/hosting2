@@ -10,6 +10,9 @@
         .accordion-button {
             text-align: center; 
         }
+        .card-text{
+            background-color: black
+        }
         @media (max-width: 576px) { /* Small devices */
             .acrd {
                 width: 100%; /* Adjust width as per your preference */
@@ -59,9 +62,9 @@
                   <div id="collapseSingle" class="accordion-collapse collapse acrd" data-bs-parent="#singleAccordion">
                     <div class="accordion-body responsive-card">
                         {% if disease_category %}
-                        <div class="card shadow-sm mb-4 acrd bg-secondary text-white">
+                        <div class="card shadow-sm mb-4 acrd bg-danger text-white">
                             <h5 class="card-title text-center text-white"><strong>{{ disease_category.name }}</strong></h5>
-                            <p class="card-text text-muted text-center bg-warning">{{ disease_category.description|safe }}</p>
+                            <p class="card-text text-muted text-center">{{ disease_category.description|safe }}</p>
                         </div>
                     {% endif %}
                     </div>
