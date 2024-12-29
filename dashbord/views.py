@@ -47,11 +47,11 @@ def dashbord(request):
         current_hour = timezone.localtime().hour
         if 5 <= current_hour < 11:
             current_time_period = "Morning"
-        elif 11 <= current_hour < 15:
+        elif 11 <= current_hour < 13:
             current_time_period = "Midday"
-        elif 15 <= current_hour < 18:
+        elif 13 <= current_hour < 17:
             current_time_period = "Afternoon"
-        elif 18 <= current_hour < 20:
+        elif 17 <= current_hour < 19:
             current_time_period = "Evening"
         else:
             current_time_period = "Night"

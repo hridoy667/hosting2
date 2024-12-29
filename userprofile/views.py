@@ -25,7 +25,7 @@ def edit_profile(request):
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
-            return redirect('view')  # Redirect to profile view after saving
+            return redirect('viewp')  # Redirect to profile view after saving
     else:
         user_form = UserForm(instance=request.user)
         profile_form = UserProfileForm(instance=user_profile)
