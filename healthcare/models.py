@@ -1,6 +1,24 @@
 from django.db import models
 
 
+class Season(models.Model):
+    name = models.CharField(max_length=50, unique=True)  # e.g., "Summer", "Winter"
+    start_month = models.IntegerField()  # e.g., 3 for March
+    end_month = models.IntegerField()  # e.g., 5 for May
+
+    def __str__(self):
+        return self.name
+
+
+class SeasonalDisease(models.Model):
+    disease_name = models.CharField(max_length=100)  # e.g., "Flu", "Diarrhea"
+    season = models.ForeignKey(Season, on_delete=models.CASCADE, related_name="diseases")
+    primary_advice = models.TextField()  # e.g., "Stay hydrated, take rest"
+
+    def __str__(self):
+        return f"{self.disease_name} ({self.season.name})"
+
+
 class DiseaseCategory(models.Model):
     """
     Model to represent disease categories.

@@ -73,6 +73,12 @@
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == '/dashbord/m/' %}active{% endif %}" href="{% url 'mindfullness' %}">Mental Wellness</a>
                         </li>
+                        <li class="nav-item ">
+                            <a class="btn btn-primary btn-sm bg-danger ms-4 {% if request.path == '/healthcare/' %}active{% endif %}" href="{% url 'healthcare' %}">
+                                Quick Checkup
+                            </a>
+                            
+                        </li>
                     </ul>
                     
                     

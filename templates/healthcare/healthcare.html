@@ -97,6 +97,22 @@
             </div>
         {% endif %}
         {% endif %}
+        
+        <h2>Current Season: {{ current_season }}</h2>
+{% if seasonal_diseases %}
+    <h3>Seasonal Diseases:</h3>
+    <ul>
+        {% for disease in seasonal_diseases %}
+            <li>
+                <strong>{{ disease.disease_name }}</strong>: {{ disease.primary_advice }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No seasonal diseases detected for the current season.</p>
+{% endif %}
+
+
     </div>
 
 
