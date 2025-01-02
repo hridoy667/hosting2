@@ -141,6 +141,13 @@
             
         }
       }
+
+      @media (max-width: 283px) {
+
+          .dropdown-item{
+          margin: 0;
+          }
+      }
     </style>
 </head>
 <body>
@@ -173,8 +180,8 @@
             <a class="nav-link dropdown-toggle" href="#" id="diagnosisDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Diagnosis
             </a>
-            <ul class="dropdown-menu" aria-labelledby="diagnosisDropdown">
-                <li><a class="dropdown-item" href="{% url 'predict' %}">Heart Disease</a></li>
+            <ul class="dropdown-menu bg-info-secondary b-0" aria-labelledby="diagnosisDropdown">
+                <li><a class="dropdown-item " href="{% url 'predict' %}">Heart Disease Risk Prediction <i>(Beta)</i></a></li>
             </ul>
           </li> 
           {% if user.is_authenticated %}
@@ -237,14 +244,15 @@
         <ul class="list-unstyled">
           <li><i class="bi bi-geo-alt-fill me-2"></i> Ashulia, Dhaka, Bangladesh</li>
           <li><i class="bi bi-envelope-fill me-2"></i> info@symptocare.com</li>
-          <li><i class="bi bi-telephone-fill me-2"></i> +880 1234 567890</li>
+          <li><i class="bi bi-telephone-fill me-2"></i> +880 1768590806</li>
         </ul>
       </div>
     </div>
     <hr class="bg-light">
     <div class="row">
       <div class="col-md-12 text-center">
-        <p class="mb-0">&copy; 2024 Ali Imam Hridoy. All rights reserved.</p>
+        <p class="fs-8">Designed & Developed By Ali Imam Hridoy</p>
+        <p class="mb-0">&copy; 2024 Symtocare. All rights reserved.</p>
       </div>
     </div>
   </div>
