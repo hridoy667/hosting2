@@ -14,7 +14,7 @@
     <style>
       
       body {
-        font-family: 'Lato', sans-serif;
+        font-family: 'Roboto', sans-serif;
         height: 100%;
         margin: 0;
         display: flex;
@@ -47,8 +47,8 @@
           font-size:1.3rem
       }
       .navRight{
-          background-color: white;
-          border-radius:20px;
+          
+          border-radius:10px;
       }
       .logo-img {
           height: 50px; /* Consistent height for logo */
@@ -152,7 +152,7 @@
 </head>
 <body>
    <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg bg-info ">
+   <nav class="navbar navbar-expand-lg bg-info fs-lg-4">
     <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'landing' %}">
         <img src="{% static 'images/png/logo-no-background.jpg' %}" class="rounded logo-img" alt="Logo">
@@ -180,8 +180,8 @@
             <a class="nav-link dropdown-toggle" href="#" id="diagnosisDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Diagnosis
             </a>
-            <ul class="dropdown-menu bg-info-secondary b-0" aria-labelledby="diagnosisDropdown">
-                <li><a class="dropdown-item " href="{% url 'predict' %}">Heart Disease Risk Prediction <i>(Beta)</i></a></li>
+            <ul class="dropdown-menu bg-transparent" aria-labelledby="diagnosisDropdown">
+                <li><a class="dropdown-item" href="{% url 'predict' %}">Heart Disease Risk Prediction <i>(Beta)</i></a></li>
             </ul>
           </li> 
           {% if user.is_authenticated %}
@@ -193,9 +193,9 @@
         
         <!-- Sign-up and Sign-in Section -->
         <div class="d-flex align-items-center">
-          <div class="d-flex align-items-center gap-2 navRight">
-            <a href="{% url 'signup' %}" class="btn btn-light">Sign Up</a>
-            <a href="{% url 'signin' %}" class="btn btn-light text-primary">Sign In</a>
+          <div class="d-flex flex-column flex-sm-row align-items-center gap-2 gap-sm-0 navRight">
+            <a href="{% url 'signup' %}" class="btn btn-light"><strong>Sign Up</strong></a>
+            <a href="{% url 'signin' %}" class="btn btn-light text-primary"><strong>Sign In</strong></a>
         </div>
         </div>
       </div>
@@ -260,6 +260,6 @@
 </footer>
 
 <!-- Bootstrap JS -->
-<script src="{% static 'scripts/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
