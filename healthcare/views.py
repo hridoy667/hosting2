@@ -5,7 +5,6 @@ from .models import HealthcareSuggestion, DiseaseCategory
 from .models import Season, SeasonalDisease
 
 from .models import SeasonalDisease
-
 from django.utils.timezone import now
 from .models import Season
 
