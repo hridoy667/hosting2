@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.utils import timezone
-from datetime import datetime
+
 from bmiInput.models import UserProfile, BMISuggestion
 from .models import TimeBasedSuggestion, TimeBasedActivity
 
