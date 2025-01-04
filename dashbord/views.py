@@ -87,7 +87,6 @@ def dashbord(request):
             'time_based_activities': time_based_activities,
             'greeting': greeting,
             'other_health_tips':other_health_tips,
-
         })
 
     return redirect('signin')

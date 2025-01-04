@@ -13,11 +13,14 @@ def get_current_season():
     Determines the current season based on the current month.
     Returns the Season object or None if no match is found.
     """
-    current_month = now().month
+    current_month = now().month  # Get the current month
+
+    # Fetch the current season from the Season model
     current_season = Season.objects.filter(
-        start_month__lte=current_month,
-        end_month__gte=current_month
-    ).first()
+        start_month__lte=current_month,  # Start month should be less than or equal to current month
+        end_month__gte=current_month     # End month should be greater than or equal to current month
+    ).first()  # Get the first matching result or None if no match
+
     return current_season
 
 def healthcare_view(request):

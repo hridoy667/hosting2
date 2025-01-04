@@ -1,2 +1,3 @@
 .venv/
-dashbord/__pycache__/views.cpython-313.pyc
+__pycache__/
+*.pyc
