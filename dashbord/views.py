@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.utils import timezone
-
+from healthcare.models import SeasonalSuggestion
+from healthcare.views import get_current_season
 from bmiInput.models import UserProfile, BMISuggestion
 from .models import TimeBasedSuggestion, TimeBasedActivity
 
@@ -17,7 +18,14 @@ def calculate_bmi(height, weight):
         return 'Obese'
 
 def mindfullness(request):
-        return render(request, 'dashbord/mindfullness.html')
+        
+        current_season = get_current_season()
+        seasonal_suggestions = SeasonalSuggestion.objects.filter(season__name=current_season)
+
+        return render(request, 'dashbord/mindfullness.html',{
+            
+             'seasonal_suggestions': seasonal_suggestions
+        })
 
 def dashbord(request):
     if request.user.is_authenticated:
@@ -42,6 +50,10 @@ def dashbord(request):
             suggestion = None
 
         other_health_tips = suggestion.other_health_tips if suggestion else "No additional tips available."
+
+
+        current_season = get_current_season()
+        seasonal_suggestions = SeasonalSuggestion.objects.filter(season__name=current_season)
 
         # Determine current time period
         current_hour = timezone.localtime().hour
@@ -87,6 +99,7 @@ def dashbord(request):
             'time_based_activities': time_based_activities,
             'greeting': greeting,
             'other_health_tips':other_health_tips,
+             'seasonal_suggestions': seasonal_suggestions,
         })
 
     return redirect('signin')

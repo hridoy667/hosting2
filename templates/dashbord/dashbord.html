@@ -183,11 +183,14 @@
                 <li><p id="weatherBasedTips">Loading tips...</p></li>
                 <li><p id="combinedTips">Loading suggestions...</p></li>
                 <li>
-                {% if other_health_tips %}
-                    <p>{{ other_health_tips }}</p>
-                {% else %}
-                    <p>No additional tips available at this time.</p>
-                {% endif %}</li>
+                {% if seasonal_suggestions %}
+                    {% for suggestion in seasonal_suggestions %}
+                        <p>{{ suggestion.general_season_tips }}</p>
+                         {% endfor %}  
+                    {% else %}
+                        <p>No seasonal health tips available for this season.</p>
+                    {% endif %}
+                </li>
                 </ul>
             </div>
         </div>

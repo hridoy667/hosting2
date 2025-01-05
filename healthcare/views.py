@@ -1,27 +1,38 @@
 from django.shortcuts import render, redirect
 from bmiInput.models import UserProfile, BMISuggestion
-from django.utils import timezone
-from .models import HealthcareSuggestion, DiseaseCategory
-from .models import Season, SeasonalDisease
-
-from .models import SeasonalDisease
+from django.utils import timezone 
 from django.utils.timezone import now
+from .models import HealthcareSuggestion, DiseaseCategory
+from .models import Season, SeasonalDisease, SeasonalSuggestion
+from .models import SeasonalDisease
+
 from .models import Season
 
-def get_current_season():
-    """
-    Determines the current season based on the current month.
-    Returns the Season object or None if no match is found.
-    """
-    current_month = now().month  # Get the current month
 
-    # Fetch the current season from the Season model
+
+def get_current_season():
+    current_month = now().month
+
+    # Fetch the current season based on the month
+    current_season = None
+
+    # For single-year seasons (e.g., Spring, Summer, Autumn)
     current_season = Season.objects.filter(
-        start_month__lte=current_month,  # Start month should be less than or equal to current month
-        end_month__gte=current_month     # End month should be greater than or equal to current month
-    ).first()  # Get the first matching result or None if no match
+        start_month__lte=current_month,
+        end_month__gte=current_month
+    ).first()
+
+    # If no season found, check for cross-year seasons (e.g., Winter: Dec to Feb)
+    if not current_season:
+        if current_month == 12:  # December
+            current_season = Season.objects.filter(name="Winter").first()
+        elif current_month == 1 or current_month == 2:  # January and February
+            current_season = Season.objects.filter(name="Winter").first()
+
 
     return current_season
+
+
 
 def healthcare_view(request):
     if not request.user.is_authenticated:
@@ -49,6 +60,8 @@ def healthcare_view(request):
         current_season = get_current_season()
         seasonal_diseases = SeasonalDisease.objects.filter(season=current_season) if current_season else []
 
+        seasonal_healthcare_suggestion = SeasonalSuggestion.objects.filter(season=current_season).first()
+
     except UserProfile.DoesNotExist:
         return render(request, 'healthcare/healthcare.html', {
             'error': 'Your profile information is incomplete. Please complete your profile.',
@@ -64,5 +77,6 @@ def healthcare_view(request):
         'bmi_category': bmi_category,
         'current_season': current_season.name if current_season else "Unknown",
         'seasonal_diseases': seasonal_diseases,
+        'seasonal_healthcare_suggestion': seasonal_healthcare_suggestion
 
     })

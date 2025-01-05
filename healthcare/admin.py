@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import DiseaseCategory, HealthcareSuggestion
-from .models import Season, SeasonalDisease
+from .models import Season, SeasonalDisease, SeasonalSuggestion 
 
 @admin.register(DiseaseCategory)
 class DiseaseCategoryAdmin(admin.ModelAdmin):
@@ -25,3 +25,5 @@ class SeasonalDiseaseAdmin(admin.ModelAdmin):
     list_display = ('disease_name', 'season', 'primary_advice')
     list_filter = ('season',)
     search_fields = ('disease_name',)
+
+admin.site.register(SeasonalSuggestion)

@@ -1,4 +1,5 @@
 {% extends 'common_codes/interface.html' %}
+
 {% block title %}Healthcare Suggestions{% endblock %}
 
 {% block main %}
@@ -13,20 +14,63 @@
         .card-text{
             background-color: black
         }
-        @media (max-width: 576px) { 
-            .acrd {
-                width: 100%; 
-                margin: 0 auto;
-                padding: 5px 7px;
-            }
 
-            .responsive-card{
-                padding:0
-            }
-          }
+        .disease-list-inline {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 15px;
+            margin-top: 20px;
+        }
 
-          
+        .disease-item {
+            background: #f7f9fc;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 1rem;
+            color: #555;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .disease-item:hover {
+            background: #e0f7fa;
+            transform: translateY(-5px);
+        }
+
+        .disease-icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        .disease-name {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .disease-advice {
+            display: none;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .disease-item:hover .disease-advice {
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .disease-list-inline {
+                justify-content: center;
+            }
+        }
+        
     </style> 
+
     <div class="container my-5 fs-5 ">
 
         <div class="card shadow-lg mb-4 bg-light border-0">
@@ -35,8 +79,48 @@
                 <p class="lead">Discover Effective Strategies, Tools, and Resources to Boost Your Physical Health and Embrace Wellness for a Happier, Healthier Life</p>
             </div>
         </div>
-    
 
+        <!-- Common Seasonal Diseases Section -->
+        <div class="container my-5">
+            <!-- Common Seasonal Diseases Section -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h4 class="text-center text-primary w-100 mb-4">Common Diseases in {{ current_season }}</h4>
+                    {% if seasonal_diseases %}
+                        <div class="disease-list-inline">
+                            {% for disease in seasonal_diseases %}
+                                <div class="disease-item">
+                                    <i class="disease-icon fas fa-virus"></i> <!-- FontAwesome icon for virus -->
+                                    <div>
+                                        <span class="disease-name">{{ disease.disease_name }}</span>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <div class="alert alert-info text-center w-100">
+                            No seasonal diseases detected for this season.
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        
+            <!-- Detailed Preventive Measures Section -->
+            {% if seasonal_healthcare_suggestion %}
+            <div class="card shadow-lg mb-4">
+                <div class="card-body fs-5 fs-sm-6">
+                    <h4 class="text-center text-primary mb-4">Preventive Measures for {{ current_season }}</h4>
+                    <p class="text-center">{{ seasonal_healthcare_suggestion.detailed_preventive_measures|safe }}</p>
+                </div>
+            </div>
+            {% else %}
+            <div class="alert alert-warning text-center">
+                No detailed preventive measures available for this season.
+            </div>
+            {% endif %}
+        </div>
+        
+        <!-- Healthcare Suggestions Section -->
         <h2 class="text-center text-primary mb-4">Healthcare Suggestions</h2>
         
         {% if error %}
@@ -44,10 +128,11 @@
                 {{ error }}
             </div>
         {% else %}
+            
             <!-- Display BMI Information -->
             {% if bmi_category %}
                 <div class="card shadow-sm mb-4">
-                    <div class="card-body ">
+                    <div class="card-body">
                         <p><strong>Diet:</strong> </br> {{ bmi_category.diet_suggestion|safe }}</p>
                         <p><strong>Exercise:</strong></br> {{ bmi_category.exercise_suggestion|safe }}</p>
                         <p><strong>Water Intake Suggestion:</strong></br> {{ bmi_category.water_intake_suggestion|safe }}</p>
@@ -58,72 +143,52 @@
 
             <!-- Disease-Specific Section -->
             {% if disease_category and disease_category.name != "General" %}
-            <h4><strong class="text-center">Learn About Your Prehistoric disease :</strong></h4>
+                <h4><strong class="text-center">Learn About Your Prehistoric disease :</strong></h4>
 
-
-            <div class="accordion accordion-flush " id="singleAccordion">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed justify-content-center text-center bg-warning fs-5 " type="button" data-bs-toggle="collapse" data-bs-target="#collapseSingle" aria-expanded="false" aria-controls="collapseSingle">
-                        <strong class="fs-5">{{ disease_category.name }}</strong>
-                    </button>
-                  </h2>
-                  <div id="collapseSingle" class="accordion-collapse collapse acrd" data-bs-parent="#singleAccordion">
-                    <div class="accordion-body responsive-card">
-                        {% if disease_category %}
-                        <div class="card shadow-sm mb-4 acrd bg-danger text-white">
-                            <h5 class="card-title text-center text-white"><strong>{{ disease_category.name }}</strong></h5>
-                            <p class="card-text text-muted text-center">{{ disease_category.description|safe }}</p>
+                <div class="accordion accordion-flush" id="singleAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed justify-content-center text-center bg-warning fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSingle" aria-expanded="false" aria-controls="collapseSingle">
+                                <strong class="fs-5">{{ disease_category.name }}</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseSingle" class="accordion-collapse collapse acrd" data-bs-parent="#singleAccordion">
+                            <div class="accordion-body responsive-card">
+                                {% if disease_category %}
+                                    <div class="card shadow-sm mb-4 acrd bg-danger text-white">
+                                        <h5 class="card-title text-center text-white"><strong>{{ disease_category.name }}</strong></h5>
+                                        <p class="card-text text-muted text-center">{{ disease_category.description|safe }}</p>
+                                    </div>
+                                {% endif %}
+                            </div>
                         </div>
-                    {% endif %}
                     </div>
-                  </div>
                 </div>
-              </div>
-              
             
-
-            <!-- Healthcare Suggestions -->
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    
-                    {% if healthcare_suggestions %}
-                    <h4 class="card-title text-center text-info">Suggestions for You</h4>
-                        <ul class="list-group list-group-flush mt-3">
-                            {% for suggestion in healthcare_suggestions %}
-                                <li class="list-group-item">
-                                    <h6 class="fw-bold">{{ suggestion.disease_category.name }}</h6>
-                                    <p>{{ suggestion.suggestion|safe }}</p>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    {% else %}
-                        <div class="alert alert-info mt-3 text-center">
-                            No specific healthcare suggestions are available for {{ disease_history }}.
-                        </div>
-                    {% endif %}
+                <!-- Healthcare Suggestions -->
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        
+                        {% if healthcare_suggestions %}
+                            <h4 class="card-title text-center text-info">Suggestions for You</h4>
+                            <ul class="list-group list-group-flush mt-3">
+                                {% for suggestion in healthcare_suggestions %}
+                                    <li class="list-group-item">
+                                        <h6 class="fw-bold">{{ suggestion.disease_category.name }}</h6>
+                                        <p>{{ suggestion.suggestion|safe }}</p>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% else %}
+                            <div class="alert alert-info mt-3 text-center">
+                                No specific healthcare suggestions are available for {{ disease_history }}.
+                            </div>
+                        {% endif %}
+                    </div>
                 </div>
-            </div>
-        {% endif %}
+            {% endif %}
         {% endif %}
         
-        {% comment %} <h2>Current Season: {{ current_season }}</h2>
-{% if seasonal_diseases %}
-    <h3>Seasonal Diseases:</h3>
-    <ul>
-        {% for disease in seasonal_diseases %}
-            <li>
-                <strong>{{ disease.disease_name }}</strong>: {{ disease.primary_advice }}
-            </li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>No seasonal diseases detected for the current season.</p>
-{% endif %} {% endcomment %}
-
-
     </div>
-
-
 
 {% endblock %}

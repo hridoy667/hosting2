@@ -8,6 +8,16 @@ class Season(models.Model):
 
     def __str__(self):
         return self.name
+    
+
+class SeasonalSuggestion(models.Model):
+    season = models.ForeignKey(Season, on_delete=models.CASCADE, related_name="seasonal_suggestions")
+    detailed_preventive_measures = models.TextField(help_text="Detailed suggestions for preventing seasonal diseases.")
+    general_season_tips = models.CharField(max_length=255, help_text="Short tips for general health during the season.")
+    additional_seasonal_advice = models.TextField(help_text="Additional health advice for this season.")
+
+    def __str__(self):
+        return f"Healthcare suggestion for {self.season.name}"
 
 
 class SeasonalDisease(models.Model):
