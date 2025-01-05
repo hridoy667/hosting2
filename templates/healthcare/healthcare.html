@@ -70,22 +70,21 @@
         }
         
     </style> 
-
-    <div class="container my-5 fs-5 ">
-
+    <div class="container my-5 fs-5">
+        <h1 class="text-center text-primary mb-4">Healthcare & Preventive Measures</h1>
+        
         <div class="card shadow-lg mb-4 bg-light border-0">
             <div class="card-body text-center">
                 <h3 class="text-primary">Empower Your Health, Transform Your Life</h3>
-                <p class="lead">Discover Effective Strategies, Tools, and Resources to Boost Your Physical Health and Embrace Wellness for a Happier, Healthier Life</p>
+                <p class="lead">Discover Effective Strategies, Preventive measures, and Resources to Boost Your Physical Health and Embrace Wellness for a Happier, Healthier Life</p>
             </div>
         </div>
 
-        <!-- Common Seasonal Diseases Section -->
-        <div class="container my-5">
+       
             <!-- Common Seasonal Diseases Section -->
             <div class="card shadow-sm mb-4">
-                <div class="card-body">
-                    <h4 class="text-center text-primary w-100 mb-4">Common Diseases in {{ current_season }}</h4>
+                <div class="card-body bg-black">
+                    <h4 class="text-center text-primary w-100 mb-4 text-white">Common Diseases in {{ current_season }}</h4>
                     {% if seasonal_diseases %}
                         <div class="disease-list-inline">
                             {% for disease in seasonal_diseases %}
@@ -131,7 +130,7 @@
             
             <!-- Display BMI Information -->
             {% if bmi_category %}
-                <div class="card shadow-sm mb-4">
+                <div class="card shadow-sm mb-4 fs-5">
                     <div class="card-body">
                         <p><strong>Diet:</strong> </br> {{ bmi_category.diet_suggestion|safe }}</p>
                         <p><strong>Exercise:</strong></br> {{ bmi_category.exercise_suggestion|safe }}</p>
@@ -188,7 +187,8 @@
                 </div>
             {% endif %}
         {% endif %}
-        
+        </div>
     </div>
+
 
 {% endblock %}
