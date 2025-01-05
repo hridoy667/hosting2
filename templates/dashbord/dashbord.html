@@ -179,17 +179,17 @@
                 <h5 class="card-title">Health Tips</h5>
                 <br>
                 <ul>
+                    <li>
+                        {% if seasonal_suggestions %}
+                            {% for suggestion in seasonal_suggestions %}
+                                <p>{{ suggestion.general_season_tips }}</p>
+                                 {% endfor %}  
+                            {% else %}
+                                <p>No seasonal health tips available for this season.</p>
+                            {% endif %}
+                        </li>
                 <li><p id="weatherBasedTips">Loading tips...</p></li>
                 <li><p id="combinedTips">Loading suggestions...</p></li>
-                <li>
-                {% if seasonal_suggestions %}
-                    {% for suggestion in seasonal_suggestions %}
-                        <p>{{ suggestion.general_season_tips }}</p>
-                         {% endfor %}  
-                    {% else %}
-                        <p>No seasonal health tips available for this season.</p>
-                    {% endif %}
-                </li>
                 </ul>
             </div>
         </div>
