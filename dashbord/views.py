@@ -51,7 +51,7 @@ def dashbord(request):
 
         other_health_tips = suggestion.other_health_tips if suggestion else "No additional tips available."
 
-
+        
         current_season = get_current_season()
         seasonal_suggestions = SeasonalSuggestion.objects.filter(season__name=current_season)
 
@@ -61,9 +61,9 @@ def dashbord(request):
             current_time_period = "Morning"
         elif 11 <= current_hour < 13:
             current_time_period = "Midday"
-        elif 13 <= current_hour < 17:
+        elif 13 <= current_hour < 18:
             current_time_period = "Afternoon"
-        elif 17 <= current_hour < 19:
+        elif 17 <= current_hour < 20:
             current_time_period = "Evening"
         else:
             current_time_period = "Night"
@@ -86,7 +86,7 @@ def dashbord(request):
             greeting = "Good Morning"
         elif 12 <= current_hour < 17:
             greeting = "Good Afternoon"
-        elif 17 <= current_hour < 21:
+        elif 17 <= current_hour < 20:
             greeting = "Good Evening"
         else:
             greeting = "Good Night"
