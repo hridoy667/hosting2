@@ -59,15 +59,31 @@
         button {
             font-size: 1.1rem; /* Increased button text size */
         }
+
+        @media (max-width: 768px) { /* For medium and small devices */
+            .container-sm {
+                padding: 15px; /* Adjust padding for smaller screens */
+                width: 95%; /* Make container take up more width */
+            }
+            h2 {
+                font-size: 1.5rem; /* Adjust heading size for smaller screens */
+            }
+            .form-label {
+                font-size: 1rem; /* Adjust label size */
+            }
+            button {
+                font-size: 1rem; /* Adjust button text size */
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container-sm p-4">
+    <div class="container-sm mt-3 ">
         <h2 class="text-center">Enter Your Information</h2>
         <form method="POST">
             {% csrf_token %}
             {% for fm in form %}
-                <div class="mb-3 form-group">
+                <div class="mb-3 form-group container">
                     {{ fm.label_tag }}
                     {{ fm }}
                     <div class="text-danger">{{ fm.errors|striptags }}</div>
