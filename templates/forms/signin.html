@@ -77,20 +77,20 @@
         <form method="POST" action="{% url 'login' %}" class="needs-validation" novalidate>
             {% csrf_token %}
             <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" name="username" required>
+                <label for="username" class="form-label">Username:</label>
+                <input type="text" class="form-control" name="username" placeholder="Enter your password" required>
                 <div class="invalid-feedback">Please enter your username.</div>
             </div>
-            <div class="form-group position-relative">
-                <label for="password" class="form-label">Password</label>
+            <div class="form-group position-relative pb-3">
+                <label for="password" class="form-label">Password:</label>
                 <input type="password" id="password" class="form-control" name="password" placeholder="Enter your password">
                 <button type="button" id="togglePassword" class="btn position-absolute" 
-                        style="top: 74%; right: 10px; transform: translateY(-50%);">
+                        style="top: 60%; right: 10px; transform: translateY(-50%);">
                     <i class="fas fa-eye"></i>
                 </button>
             </div>
-            <button type="submit" class="btn btn-primary w-100">Sign In</button>
-            <p class="mt-3 under">Don't have an account? <a href="{% url 'signup' %}">Sign up</a></p>
+            <button type="submit" class="btn btn-primary mt-1 w-100 ">Sign In</button>
+            <p class="mt-2 under"><a href="{% url 'password_reset' %}">Forgot Your Password?</a> | Don't have an account? <a href="{% url 'signup' %}">Sign up</a></p>
         </form>
     </div>
 </section>
