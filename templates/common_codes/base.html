@@ -184,23 +184,26 @@
                 <li><a class="dropdown-item" href="{% url 'predict' %}">Heart Disease Risk Prediction <i>(Beta)</i></a></li>
             </ul>
           </li> 
-          {% if user.is_authenticated %}
-          <li class="nav-item ml-3 ">
-            <a class="nav-link text-black" href="{% url 'dashbord' %}">Dashboard</a>
-          </li>
-          <li class="nav-item ml-3 ">
-            <a class="nav-link text-black" href="{% url 'logout' %}">Logout {{user.username}}</a>
-          </li>
-          {% endif %}                                        
+                                                
         </ul>
         
         <!-- Sign-up and Sign-in Section -->
-        <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center justify-content-end">
+          {% if user.is_authenticated %}
+          <div class="d-flex flex-column flex-sm-row align-items-center gap-2 gap-sm-0 navRight">
+            <a href="{% url 'dashbord' %}" class="btn btn-light"><strong>Dashboard</strong></a>
+            <a href="{% url 'logout' %}" class="btn btn-light text-primary">
+              <strong>Logout {{ user.username }}</strong>
+            </a>
+          </div>
+          {% else %}
           <div class="d-flex flex-column flex-sm-row align-items-center gap-2 gap-sm-0 navRight">
             <a href="{% url 'signup' %}" class="btn btn-light"><strong>Sign Up</strong></a>
             <a href="{% url 'signin' %}" class="btn btn-light text-primary"><strong>Sign In</strong></a>
+          </div>
+          {% endif %}
         </div>
-        </div>
+        
       </div>
     </div>
   </nav>

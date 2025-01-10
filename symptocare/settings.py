@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'userprofile',
     'diagnosis',
     'healthcare',
+    'risk_assessment',
 ]
 
 # Middleware

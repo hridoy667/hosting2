@@ -1,0 +1,36 @@
+{% extends 'common_codes/interface.html' %}
+{%load static%}
+{% block title %}Healthcare Suggestions{% endblock %}
+
+{% block main %}
+    <div class="container my-5 fs-5">
+        
+        <h1 class="text-center text-primary mb-4">Risk Assesment</h1>
+        
+        <div class="card shadow-lg mb-4 bg-light border-0">
+            <div class="card-body text-center">
+                <h3 class="text-primary">Measure Risk & Take Preventive Actions</h3>
+                <p class="lead">Discover Effective Strategies, Preventive measures, and Resources to Boost Your Physical Health and Embrace Wellness for a Happier, Healthier Life</p>
+            </div>
+        </div>
+        <div class="card shadow-lg">
+            <div class="row g-0">
+                <!-- Text Section -->
+                <div class="col-md-8 p-4 d-flex flex-column justify-content-center">
+                    <h3 class="card-title text-primary">Heart Disease</h3>
+                    <p class="card-text">
+                        In Bangladesh, cardiovascular diseases (CVDs) are a leading cause of mortality, accounting for approximately 30% of all deaths, making it one of the leading causes of mortality. Take charge of your heart health today. We use research-based approach for predicting Heart Disease. Accuracy of our heart disease risk assessment tool is around 91.5%. Predict your heart health risk with accuracy and take proactive steps toward a healthier heart. Early detection saves lives—get insights today.
+                    </p>
+                    <a href="{% url 'predict' %}" class="btn btn-primary mt-3">Heart Disease Prediction</a>
+                </div>
+                <!-- Image Section -->
+                <div class="col-md-4">
+                    <img src="images/heart.jpg" 
+                         alt="Heart Health" class="img-fluid rounded-end">
+                </div>
+            </div>
+        </div>
+    </div>
+    {%endblock%}
+    
+        

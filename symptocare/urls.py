@@ -35,4 +35,5 @@ urlpatterns = [
     path('userprofile/', include('userprofile.urls')),
     path('diagnose/', include('diagnosis.urls')), 
     path('healthcare/', include('healthcare.urls')), 
+    path('assessments/', include('risk_assessment.urls')), 
 ]
