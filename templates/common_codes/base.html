@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Features{% endblock %}</title>
+    <title>{% block title %}Feature{% endblock %}</title>
+    <link rel="icon" href="{% static 'images/png/logo-color.png' %}" type="image">
+
 
     <!-- Bootstrap CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -12,7 +14,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     
     <style>
-      
+      .favicon {
+        aspect-ratio: 1/1
+      }
+
       body {
         font-family: 'Roboto', sans-serif;
         height: 100%;
@@ -180,7 +185,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="diagnosisDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Diagnosis
             </a>
-            <ul class="dropdown-menu bg-sm-transparent" aria-labelledby="diagnosisDropdown">
+            <ul class="dropdown-menu bg-transparent" aria-labelledby="diagnosisDropdown">
                 <li><a class="dropdown-item" href="{% url 'predict' %}">Heart Disease Risk Prediction <i>(Beta)</i></a></li>
             </ul>
           </li> 
@@ -210,10 +215,10 @@
   
    <!-- Main Section -->
    <div class="main-wrapper">
-    <div class="msg">
+    <div class="msg ">
       {% if messages %}
       {% for message in messages %}
-      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
          <b>{{ message }}</b>
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>

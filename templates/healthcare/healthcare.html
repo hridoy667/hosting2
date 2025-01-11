@@ -86,10 +86,10 @@
                 <div class="card-body bg-black">
                     <h4 class="text-center text-primary w-100 mb-4 text-white">Common Diseases in {{ current_season }}</h4>
                     {% if seasonal_diseases %}
-                        <div class="disease-list-inline">
+                        <div class="disease-list-inline d-flex justify-content-center align-items-center">
                             {% for disease in seasonal_diseases %}
                                 <div class="disease-item">
-                                    <i class="disease-icon fas fa-virus"></i> <!-- FontAwesome icon for virus -->
+                                    <i class="disease-icon fas fa-virus"></i>
                                     <div>
                                         <span class="disease-name">{{ disease.disease_name }}</span>
                                     </div>
